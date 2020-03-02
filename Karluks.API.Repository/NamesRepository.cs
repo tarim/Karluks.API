@@ -2,7 +2,7 @@
 
 namespace Karluks.API.Repository
 {
-    public class Class1
+    public class NamesRepository
     {
     }
 }
