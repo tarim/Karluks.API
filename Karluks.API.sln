@@ -1,0 +1,35 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Karluks.API", "Karluks.API\Karluks.API.csproj", "{FD59F044-F195-4809-A322-D4360B03433E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Karluks.API.Repository", "Karluks.API.Repository\Karluks.API.Repository.csproj", "{13AC2831-A23B-428F-81B8-E2C31C84AF03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Karluks.API.Infrastructure.Data", "Karluks.API.Infrastructure.Data\Karluks.API.Infrastructure.Data.csproj", "{AC3531AC-15C5-403B-B2CE-BD9ED1E9B581}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Karluks.API.Infrastructure.Interface", "Karluks.API.Infrastructure.Interface\Karluks.API.Infrastructure.Interface.csproj", "{9187CD17-C30E-4F41-B058-AC4429DC5DD6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD59F044-F195-4809-A322-D4360B03433E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD59F044-F195-4809-A322-D4360B03433E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD59F044-F195-4809-A322-D4360B03433E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD59F044-F195-4809-A322-D4360B03433E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13AC2831-A23B-428F-81B8-E2C31C84AF03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13AC2831-A23B-428F-81B8-E2C31C84AF03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13AC2831-A23B-428F-81B8-E2C31C84AF03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13AC2831-A23B-428F-81B8-E2C31C84AF03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC3531AC-15C5-403B-B2CE-BD9ED1E9B581}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC3531AC-15C5-403B-B2CE-BD9ED1E9B581}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC3531AC-15C5-403B-B2CE-BD9ED1E9B581}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC3531AC-15C5-403B-B2CE-BD9ED1E9B581}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9187CD17-C30E-4F41-B058-AC4429DC5DD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9187CD17-C30E-4F41-B058-AC4429DC5DD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9187CD17-C30E-4F41-B058-AC4429DC5DD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9187CD17-C30E-4F41-B058-AC4429DC5DD6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
