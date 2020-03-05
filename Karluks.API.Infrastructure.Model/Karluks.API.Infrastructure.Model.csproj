@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MySql.Data" Version="8.0.19" />
+    <Folder Include="names\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Karluks.API.Infrastructure.Common\Karluks.API.Infrastructure.Common.csproj" />

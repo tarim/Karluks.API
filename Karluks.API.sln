@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Karluks.API.Infrastructure.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Karluks.API.Infrastructure.Interface", "Karluks.API.Infrastructure.Interface\Karluks.API.Infrastructure.Interface.csproj", "{9187CD17-C30E-4F41-B058-AC4429DC5DD6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Karluks.API.Infrastructure.Model", "Karluks.API.Infrastructure.Model\Karluks.API.Infrastructure.Model.csproj", "{B1606197-85B9-4FB6-82C3-31B85FDC98E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Karluks.API.Infrastructure.Common", "Karluks.API.Infrastructure.Common\Karluks.API.Infrastructure.Common.csproj", "{59BC8427-0BFA-489C-B00C-776CE12F6111}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Karluks.API.Infrastructure", "Karluks.API.Infrastructure\Karluks.API.Infrastructure.csproj", "{27DB4F13-5DF4-4E1C-8386-D6C818862CAD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,5 +37,17 @@ Global
 		{9187CD17-C30E-4F41-B058-AC4429DC5DD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9187CD17-C30E-4F41-B058-AC4429DC5DD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9187CD17-C30E-4F41-B058-AC4429DC5DD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1606197-85B9-4FB6-82C3-31B85FDC98E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1606197-85B9-4FB6-82C3-31B85FDC98E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1606197-85B9-4FB6-82C3-31B85FDC98E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1606197-85B9-4FB6-82C3-31B85FDC98E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59BC8427-0BFA-489C-B00C-776CE12F6111}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59BC8427-0BFA-489C-B00C-776CE12F6111}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59BC8427-0BFA-489C-B00C-776CE12F6111}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59BC8427-0BFA-489C-B00C-776CE12F6111}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27DB4F13-5DF4-4E1C-8386-D6C818862CAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27DB4F13-5DF4-4E1C-8386-D6C818862CAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27DB4F13-5DF4-4E1C-8386-D6C818862CAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27DB4F13-5DF4-4E1C-8386-D6C818862CAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -5,9 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="DataProvider\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="log4net" Version="2.0.8" />
     <PackageReference Include="MySql.Data" Version="8.0.19" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Karluks.API.Infrastructure.Interface\Karluks.API.Infrastructure.Interface.csproj" />
     <ProjectReference Include="..\Karluks.API.Infrastructure.Common\Karluks.API.Infrastructure.Common.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
   </ItemGroup>
 </Project>

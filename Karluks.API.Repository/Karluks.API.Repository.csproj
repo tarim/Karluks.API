@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Karluks.API.Infrastructure.Model\Karluks.API.Infrastructure.Model.csproj" />
+    <ProjectReference Include="..\Karluks.API.Infrastructure.Interface\Karluks.API.Infrastructure.Interface.csproj" />
+  </ItemGroup>
 </Project>
