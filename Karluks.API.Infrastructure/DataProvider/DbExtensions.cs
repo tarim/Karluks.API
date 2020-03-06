@@ -61,6 +61,11 @@ namespace Karluks.API.Infrastructure.DataProvider
         {
             return GetValueOrDefault(reader, columnName, reader.GetInt32, 0);
         }
+
+        public static Boolean GetBoolean(this IDataReader reader, string columnName)
+        {
+            return GetValueOrDefault(reader, columnName, reader.GetBoolean, false);
+        }
         private static byte[] GetBlob(this IDataReader reader, int i)
         {
             var dataReaderWrapper = reader as DataReaderWrapper;

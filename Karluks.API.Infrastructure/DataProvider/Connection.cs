@@ -72,6 +72,17 @@ namespace Karluks.API.Infrastructure.DataProvider
             return result;
         }
 
+        private Result<T> ReadEntity<T>(IDbCommand cmd, Func<IDataReader, Result<T>> customRead) where T : class
+        {
+            var result = new Result<T>();
+            DoWithDataReader(cmd, reader =>
+            {
+                result = customRead(reader);
+            });
+
+            return result;
+        }
+
         private static void DoWithCommand(string query, Action<IDbCommand> action, params IDbDataParameter[] parameters)
         {
             using (var cmd = CreateCommand(query))
@@ -142,6 +153,12 @@ namespace Karluks.API.Infrastructure.DataProvider
         {
             await DoWithCommandAsync(query, cmd => ReadEntityAsync(cmd, customRead), parameters);
         }
+
+        public async Task GetResultAsync<T>(string query, Func<IDataReader, Result<T>> customRead, params IDbDataParameter[] parameters) where T : class
+        {
+            await DoWithCommandAsync(query, cmd => ReadEntityAsync(cmd, customRead), parameters);
+        }
+
         public async Task<int> ExecuteNonQueryAsync(string query, params IDbDataParameter[] parameters)
         {
             return await DoWithCommandAsync(query, ExecuteNonQueryAsync, parameters);
@@ -170,6 +187,16 @@ namespace Karluks.API.Infrastructure.DataProvider
         private async Task<Results<T>> ReadEntityAsync<T>(IDbCommand cmd, Func<IDataReader, Results<T>> customRead) where T : class
         {
             var result = new Results<T>();
+            await DoWithDataReaderAsync(cmd, reader =>
+            {
+                result = customRead(reader);
+            });
+
+            return result;
+        }
+        private async Task<Result<T>> ReadEntityAsync<T>(IDbCommand cmd, Func<IDataReader, Result<T>> customRead) where T : class
+        {
+            var result = new Result<T>();
             await DoWithDataReaderAsync(cmd, reader =>
             {
                 result = customRead(reader);

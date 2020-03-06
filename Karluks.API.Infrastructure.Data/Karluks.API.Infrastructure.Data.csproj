@@ -10,5 +10,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Karluks.API.Infrastructure.Interface\Karluks.API.Infrastructure.Interface.csproj" />
+    <ProjectReference Include="..\Karluks.API.Infrastructure\Karluks.API.Infrastructure.csproj" />
+    <ProjectReference Include="..\Karluks.API.Infrastructure.Model\Karluks.API.Infrastructure.Model.csproj" />
+    <ProjectReference Include="..\Karluks.API.Infrastructure.Common\Karluks.API.Infrastructure.Common.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repository\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Connection.cs" />
+    <Compile Remove="Base.cs" />
   </ItemGroup>
 </Project>

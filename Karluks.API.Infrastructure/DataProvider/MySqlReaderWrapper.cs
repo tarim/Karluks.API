@@ -12,7 +12,7 @@ namespace Karluks.API.Infrastructure.DataProvider
             get;set;
         }
 
-        public MySqlReaderWrapper(ILog logger, IDataReader reader, int rowNum = -1)
+        public MySqlReaderWrapper(ILog logger, IDataReader reader)
             : base(logger, reader)
         {
            // if (rowNum > 0)

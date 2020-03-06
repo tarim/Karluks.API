@@ -24,6 +24,21 @@ namespace Karluks.API.Infrastructure.DataProvider
         {
             await _connection.GetResultAsync(query, customRead, parameters);
         }
+        protected async Task GetResultAsync<T>(string query, Func<IDataReader, Result<T>> customRead,
+            params IDbDataParameter[] parameters) where T : class
+        {
+            await _connection.GetResultAsync(query, customRead, parameters);
+        }
+
+        protected async Task GetResultAsync<T>(string query, Func<IDataReader, Results<T>> customRead) where T : class
+        {
+            await _connection.GetResultAsync(query, customRead);
+        }
+
+        protected async Task GetResultAsync<T>(string query, Func<IDataReader, Result<T>> customRead) where T : class
+        {
+            await _connection.GetResultAsync(query, customRead);
+        }
 
         protected async Task<int> ExecuteNonQueryAsync(string query, params IDbDataParameter[] parameters)
         {

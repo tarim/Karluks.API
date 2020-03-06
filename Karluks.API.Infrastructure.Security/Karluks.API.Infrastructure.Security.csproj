@@ -5,10 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MySql.Data" Version="8.0.19" />
+    <Compile Remove="Class1.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Karluks.API.Infrastructure.Interface\Karluks.API.Infrastructure.Interface.csproj" />
+    <ProjectReference Include="..\Karluks.API.Infrastructure.Data\Karluks.API.Infrastructure.Data.csproj" />
     <ProjectReference Include="..\Karluks.API.Infrastructure.Common\Karluks.API.Infrastructure.Common.csproj" />
     <ProjectReference Include="..\Karluks.API.Infrastructure.Model\Karluks.API.Infrastructure.Model.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
   </ItemGroup>
 </Project>

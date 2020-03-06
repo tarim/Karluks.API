@@ -71,7 +71,6 @@ namespace Karluks.API.Infrastructure.DataProvider
             return _reader.GetDecimal(i);
         }
 
-        // TO DO: remove OracleDecimal processing when DataProviders have been removed
         public object GetValue(int i) // overriden by the wrapper
         {
             try

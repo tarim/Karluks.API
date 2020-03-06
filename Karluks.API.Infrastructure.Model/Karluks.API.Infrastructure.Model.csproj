@@ -10,4 +10,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Karluks.API.Infrastructure.Common\Karluks.API.Infrastructure.Common.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+  </ItemGroup>
 </Project>
