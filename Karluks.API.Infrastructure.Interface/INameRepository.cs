@@ -20,5 +20,7 @@ namespace Karluks.API.Infrastructure.Interface
         Task<Result<UyghurName>> AddUyghurName(UyghurName uyghurName);
 
         Task<Result<UyghurName>> UpdateUyghurName(UyghurName uyghurName);
+
+        Task<Result<int>> DeleteUyghurName(int id);
     }
 }

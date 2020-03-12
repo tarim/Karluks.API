@@ -10,7 +10,8 @@ namespace Karluks.API.Infrastructure.Model
         public string LastName { get; set; }
         public string Email { get; set; }
         public StatusType Status { get; set; }
-        public RoleType Role { get; set; }
+        public ProfileType Profile { get; set; }
+        public string[] Roles { get; set; }
         public string Description { get; set; }
     }
 }

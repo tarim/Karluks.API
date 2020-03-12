@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<doc>
+    <assembly>
+        <name>Karluks.API</name>
+    </assembly>
+    <members>
+        <member name="M:Karluks.API.Controllers.WeatherForecastController.Get">
+            <summary>
+            This is a simple Get Method
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

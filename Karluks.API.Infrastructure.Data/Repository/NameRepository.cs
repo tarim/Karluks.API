@@ -48,5 +48,9 @@ namespace Karluks.API.Infrastructure.Data.Repository
             throw new System.NotImplementedException();
         }
 
+        public Task<Result<int>> DeleteUyghurName(int id)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

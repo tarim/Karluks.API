@@ -8,7 +8,7 @@ namespace Karluks.API.Infrastructure.Common.Enums
         Both=2
     }
 
-    public enum RoleType
+    public enum ProfileType
     {
         Basic=0,
         Advanced=1,

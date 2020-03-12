@@ -6,6 +6,9 @@
 
   <ItemGroup>
     <Compile Remove="Class1.cs" />
+    <Compile Remove="KarluksAuthorizationServiceProvider.cs" />
+    <Compile Remove="KarluksAuthorizationServiceProvider.cs" />
+    <Compile Remove="KarluksAuthorizationServiceProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Karluks.API.Infrastructure.Interface\Karluks.API.Infrastructure.Interface.csproj" />
