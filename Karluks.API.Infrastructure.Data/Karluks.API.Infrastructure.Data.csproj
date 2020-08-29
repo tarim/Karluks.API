@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <PackageReference Include="MySql.Data" Version="8.0.19" />
-    <PackageReference Include="log4net" Version="2.0.8" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Karluks.API.Infrastructure.Interface\Karluks.API.Infrastructure.Interface.csproj" />

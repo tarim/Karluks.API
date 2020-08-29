@@ -10,14 +10,16 @@ using Karluks.API.Infrastructure.Common;
 using Karluks.API.Infrastructure.DataProvider;
 using Karluks.API.Infrastructure.Interface;
 using Karluks.API.Infrastructure.Model.names;
-using log4net;
+using Microsoft.Extensions.Logging;
 
 namespace Karluks.API.Infrastructure.Data.Repository
 {
     public class NameRepository : BaseRepository, INameRepository
     {
-        public NameRepository(IConnection connection,ILog log) : base(connection,log)
+        private readonly ILogger<NameRepository> logger;
+        public NameRepository(IConnection connection,ILogger<NameRepository> log) : base(connection)
         {
+            logger = log;
         }
 
         public async Task<Result<IList<UyghurName>>> GetUyghurName()

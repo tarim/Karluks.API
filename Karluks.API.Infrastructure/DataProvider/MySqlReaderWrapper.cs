@@ -1,7 +1,7 @@
-﻿using System;
+﻿
 using System.Data;
-using log4net;
-using MySql.Data.MySqlClient;
+using Microsoft.Extensions.Logging;
+
 
 namespace Karluks.API.Infrastructure.DataProvider
 {
@@ -12,8 +12,8 @@ namespace Karluks.API.Infrastructure.DataProvider
             get;set;
         }
 
-        public MySqlReaderWrapper(ILog logger, IDataReader reader)
-            : base(logger, reader)
+        public MySqlReaderWrapper( IDataReader reader)
+            : base(reader)
         {
            // if (rowNum > 0)
           //  {

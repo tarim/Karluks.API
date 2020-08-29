@@ -3,16 +3,16 @@ using System.Data;
 using System.Threading.Tasks;
 using Karluks.API.Infrastructure.Common;
 using Karluks.API.Infrastructure.Interface;
-using log4net;
+using Microsoft.Extensions.Logging;
 using MySql.Data.MySqlClient;
 
 namespace Karluks.API.Infrastructure.DataProvider
 {
-    public abstract class BaseRepository : Base
+    public abstract class BaseRepository
     {
         private readonly IConnection _connection;
 
-        protected BaseRepository(IConnection connection, ILog log) : base(log)
+        protected BaseRepository(IConnection connection) 
         {
             _connection = connection;
         }

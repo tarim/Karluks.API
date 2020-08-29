@@ -1,12 +1,13 @@
 ﻿
-using log4net;
+
+using Microsoft.Extensions.Logging;
 
 namespace Karluks.API.Infrastructure.DataProvider
 {
     public abstract class Base
     {
-        protected readonly ILog Log;
-        protected Base(ILog log)
+        protected readonly ILogger<Base> Log;
+        protected Base(ILogger<Base> log)
         {
             
             Log = log;

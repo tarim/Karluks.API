@@ -3,15 +3,15 @@ using System.Data;
 using System.Threading.Tasks;
 using Karluks.API.Infrastructure.Common;
 using Karluks.API.Infrastructure.Interface;
-using log4net;
+using Microsoft.Extensions.Logging;
 using MySql.Data.MySqlClient;
 
 namespace Karluks.API.Infrastructure.DataProvider
 {
-    public class Connection : Base, IConnection
+    public class Connection : IConnection
     {
         private readonly string _connection;
-        public Connection(ILog log, string connection) : base(log)
+        public Connection(string connection)
         {
             _connection = connection;
         }
@@ -54,7 +54,7 @@ namespace Karluks.API.Infrastructure.DataProvider
             Open(conn =>
             {
                 command.Connection = conn;
-                using (IDataReader dataReader = new MySqlReaderWrapper(Log, command.ExecuteReader()))
+                using (IDataReader dataReader = new MySqlReaderWrapper( command.ExecuteReader()))
                 {
                     action(dataReader);
                 }
@@ -209,7 +209,7 @@ namespace Karluks.API.Infrastructure.DataProvider
             await OpenAsync(conn =>
             {
                 command.Connection = conn;
-                using (IDataReader dataReader = new MySqlReaderWrapper(Log, command.ExecuteReader()))
+                using (IDataReader dataReader = new MySqlReaderWrapper( command.ExecuteReader()))
                 {
                     actionAsync(dataReader);
                 }

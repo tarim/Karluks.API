@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using log4net;
+using Microsoft.Extensions.Logging;
 using MySql.Data.MySqlClient;
 using MySql.Data.Types;
 
@@ -9,7 +9,7 @@ namespace Karluks.API.Infrastructure.DataProvider
 {
     internal class DataReaderWrapper : IDataReader
     {
-        private readonly ILog _logger;
+      //  private readonly ILogger _logger;
         protected readonly IDataReader _reader;
 
         private Dictionary<string, int> _columns = null;
@@ -19,10 +19,10 @@ namespace Karluks.API.Infrastructure.DataProvider
             get { return _reader; }
         }
 
-        protected DataReaderWrapper(ILog logger, IDataReader reader)
+        protected DataReaderWrapper( IDataReader reader)
         {
             _reader = reader;
-            _logger = logger;
+      //      _logger = logger;
         }
 
         public bool ContainsColumn(string name)
@@ -36,19 +36,19 @@ namespace Karluks.API.Infrastructure.DataProvider
             if (_columns == null)
             {
                 _columns = new Dictionary<string, int>(StringComparer.OrdinalIgnoreCase);
-                CollectColumns(_columns, _reader, _logger);
+                CollectColumns(_columns, _reader);
             }
         }
 
-        private static void CollectColumns(IDictionary<string, int> columns, IDataRecord reader, ILog logger)
+        private static void CollectColumns(IDictionary<string, int> columns, IDataRecord reader)
         {
             for (var i = 0; i < reader.FieldCount; i++)
             {
                 var fldName = reader.GetName(i);
                 if (!columns.ContainsKey(fldName))
                     columns.Add(fldName, i);
-                else
-                    logger.Warn($"A few fields with the name {fldName} in db outcome");
+              //  else
+              //      logger.LogWarning($"A few fields with the name {fldName} in db outcome");
             }
         }
 
